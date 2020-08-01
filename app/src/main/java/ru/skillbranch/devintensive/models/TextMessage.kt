@@ -11,7 +11,14 @@ class TextMessage(
     var text: String?
 ) : BaseMessage(id, from, chat,isIncoming,date) {
     override fun formatMessage(): String {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        var msg = "$id ${from?.firstName}"
+        msg += when (isIncoming) {
+            true -> "получил"
+            false -> "отправил"
+        }
+        msg += "сообщение"
+
+        return msg
     }
 
 }
