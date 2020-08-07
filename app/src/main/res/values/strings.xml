@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dev-Intensive</string>
+    <string name="et_email">Email</string>
+    <string name="et_password">Password</string>
+    <string name="btn_login">login</string>
+    <string name="et_answer">Введите текст</string>
 </resources>
