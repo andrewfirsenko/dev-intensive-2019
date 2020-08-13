@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ru.skillbranch.devintensive.ui.custom.AspectRatioImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/profile_bg"
+            android:scaleType="centerCrop"
+            app:aspectRatio="1.78"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_round_bg"
+                android:src="@drawable/ic_create_black_24dp"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="36dp"/>
+
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:src="@drawable/avatar_default"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageButton
+                android:id="@+id/btn_switch_theme"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_round_bg"
+                android:src="@drawable/ic_brightness_high_black_24dp"
+                android:layout_toLeftOf="@id/iv_avatar"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="36dp"/>
+
+            <TextView
+                android:id="@+id/tv_nick_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Weak"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/iv_avatar"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="20sp"
+                android:textColor="@android:color/white"/>
+
+            <TextView
+                android:id="@+id/tv_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junior Android Dev"
+                android:layout_below="@id/tv_nick_name"
+                android:layout_centerHorizontal="true"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/colorAccentedSurface">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:text="0"
+                android:fontFamily="sans-serif-medium"
+                android:drawableLeft="@drawable/ic_sp_24"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Рейтинг"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_respect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:text="0"
+                android:fontFamily="sans-serif-medium"
+                android:drawableLeft="@drawable/ic_respect_24"
+                android:drawablePadding="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:text="Уважение"
+                android:fontFamily="sans-serif-medium"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ic_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar_default"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wr_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_avatar"
+            android:paddingLeft="16dp">
+
+            <EditText
+                android:id="@+id/et_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Имя"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wr_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_avatar"
+            android:layout_below="@id/wr_first_name"
+            android:paddingLeft="16dp">
+
+            <EditText
+                android:id="@+id/et_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Фамилия"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ic_about"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar_default"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wr_about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_about"
+            android:paddingLeft="16dp"
+            app:counterMaxLength="128">
+
+            <EditText
+                android:id="@+id/et_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="О себе"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:layout_below="@id/wr_about"
+            android:id="@+id/ic_repository"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar_default"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wr_repository"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ic_repository"
+            android:layout_below="@id/wr_about"
+            android:paddingLeft="16dp"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/et_repository"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Репозиторий"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

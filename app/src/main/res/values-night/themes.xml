@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/cardview_shadow_start_color</item>
+        <item name="colorPrimaryDark">@color/cardview_light_background</item>
+        <item name="colorAccent">@color/design_default_color_primary</item>
+
+        <item name="colorAccentedSurface">@color/cardview_shadow_start_color</item>
+        <item name="сolorIcon">@color/cardview_light_background</item>
+        <item name="colorDivider">@color/cardview_shadow_start_color</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+    </style>
+
+</resources>
